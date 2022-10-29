@@ -23,12 +23,12 @@ def check(id):
     return True
 
 # Подключение к существующей базе данных
-db = psycopg2.connect(user="myitrkayvvovkm",
+db = psycopg2.connect(user="zajgbowbfxyjse",
                               # пароль, который указали при установке PostgreSQL
-                              password="4c652f79a1107d7d4752821bb86dc9a3e0369b8fb2f0c0f6e0429a9e57d0d3f5",
-                              host="ec2-34-194-40-194.compute-1.amazonaws.com",
+                              password="c0997ab4d122f69bec72b26f4b1c2308b4be26c254f137c23e46953eeec97067",
+                              host="ec2-3-220-207-90.compute-1.amazonaws.com",
                               port="5432",
-                              database="d823td4l4cq140")
+                              database="d3d3m37v7cvvjb")
 
 # Курсор для выполнения операций с базой данных
 sql = db.cursor()
@@ -89,12 +89,12 @@ def start(message):
     referrer = None
     st = "/start"
     if startms == st:
-        db = psycopg2.connect(user="myitrkayvvovkm",
+        db = psycopg2.connect(user="zajgbowbfxyjse",
                               # пароль, который указали при установке PostgreSQL
-                              password="4c652f79a1107d7d4752821bb86dc9a3e0369b8fb2f0c0f6e0429a9e57d0d3f5",
-                              host="ec2-34-194-40-194.compute-1.amazonaws.com",
+                              password="c0997ab4d122f69bec72b26f4b1c2308b4be26c254f137c23e46953eeec97067",
+                              host="ec2-3-220-207-90.compute-1.amazonaws.com",
                               port="5432",
-                              database="d823td4l4cq140")
+                              database="d3d3m37v7cvvjb")
         sql = db.cursor()
         sql.execute("SELECT id FROM users WHERE id = %s", [userr])
         values = [userr, user_namess]
@@ -105,12 +105,12 @@ def start(message):
 
             ref_id = msg.split()[1]
             userr = message.chat.id
-            db = psycopg2.connect(user="myitrkayvvovkm",
+            db = psycopg2.connect(user="zajgbowbfxyjse",
                               # пароль, который указали при установке PostgreSQL
-                              password="4c652f79a1107d7d4752821bb86dc9a3e0369b8fb2f0c0f6e0429a9e57d0d3f5",
-                              host="ec2-34-194-40-194.compute-1.amazonaws.com",
+                              password="c0997ab4d122f69bec72b26f4b1c2308b4be26c254f137c23e46953eeec97067",
+                              host="ec2-3-220-207-90.compute-1.amazonaws.com",
                               port="5432",
-                              database="d823td4l4cq140")
+                              database="d3d3m37v7cvvjb")
             sql = db.cursor()
             sql.execute("SELECT parent_id FROM users WHERE id = %s", [userr])
             if sql.fetchone()[0] is None:
@@ -118,12 +118,12 @@ def start(message):
                 db.commit()
         except:
             userr = message.chat.id
-            db = psycopg2.connect(user="myitrkayvvovkm",
+            db = psycopg2.connect(user="zajgbowbfxyjse",
                               # пароль, который указали при установке PostgreSQL
-                              password="4c652f79a1107d7d4752821bb86dc9a3e0369b8fb2f0c0f6e0429a9e57d0d3f5",
-                              host="ec2-34-194-40-194.compute-1.amazonaws.com",
+                              password="c0997ab4d122f69bec72b26f4b1c2308b4be26c254f137c23e46953eeec97067",
+                              host="ec2-3-220-207-90.compute-1.amazonaws.com",
                               port="5432",
-                              database="d823td4l4cq140")
+                              database="d3d3m37v7cvvjb")
             sql = db.cursor()
             sql.execute("SELECT parent_id FROM users WHERE id = %s", [userr])
             if sql.fetchone()[0] is None:
@@ -140,12 +140,12 @@ def start(message):
             return True
 
         msg = message.text
-        db = psycopg2.connect(user="myitrkayvvovkm",
+        db = psycopg2.connect(user="zajgbowbfxyjse",
                               # пароль, который указали при установке PostgreSQL
-                              password="4c652f79a1107d7d4752821bb86dc9a3e0369b8fb2f0c0f6e0429a9e57d0d3f5",
-                              host="ec2-34-194-40-194.compute-1.amazonaws.com",
+                              password="c0997ab4d122f69bec72b26f4b1c2308b4be26c254f137c23e46953eeec97067",
+                              host="ec2-3-220-207-90.compute-1.amazonaws.com",
                               port="5432",
-                              database="d823td4l4cq140")
+                              database="d3d3m37v7cvvjb")
         sql = db.cursor()
         sql.execute("SELECT id FROM users WHERE id = %s", [userr])
         values = [userr, user_namess, id_no_ref]
@@ -195,12 +195,12 @@ def query_handler(call):
                 keyboard.row('⚙️ Кошелёк', '💸 Вывод')
                 keyboard.row('📊 Информация', '💻  Партнеры')
                 bot.send_message(user, "*🏡 Home*", parse_mode="Markdown", reply_markup=keyboard)
-                db = psycopg2.connect(user="myitrkayvvovkm",
+                db = psycopg2.connect(user="zajgbowbfxyjse",
                               # пароль, который указали при установке PostgreSQL
-                              password="4c652f79a1107d7d4752821bb86dc9a3e0369b8fb2f0c0f6e0429a9e57d0d3f5",
-                              host="ec2-34-194-40-194.compute-1.amazonaws.com",
+                              password="c0997ab4d122f69bec72b26f4b1c2308b4be26c254f137c23e46953eeec97067",
+                              host="ec2-3-220-207-90.compute-1.amazonaws.com",
                               port="5432",
-                              database="d823td4l4cq140")
+                              database="d3d3m37v7cvvjb")
                 sql = db.cursor()
                 sql.execute("SELECT sub_chek FROM users WHERE id = %s", [user])
                 if sql.fetchone()[0] == 0:
@@ -258,12 +258,12 @@ def send_text(message):
     if message.text == '🆔 Аккаунт':
         user_id = message.chat.id
         user = str(user_id)
-        db = psycopg2.connect(user="myitrkayvvovkm",
+        db = psycopg2.connect(user="zajgbowbfxyjse",
                               # пароль, который указали при установке PostgreSQL
-                              password="4c652f79a1107d7d4752821bb86dc9a3e0369b8fb2f0c0f6e0429a9e57d0d3f5",
-                              host="ec2-34-194-40-194.compute-1.amazonaws.com",
+                              password="c0997ab4d122f69bec72b26f4b1c2308b4be26c254f137c23e46953eeec97067",
+                              host="ec2-3-220-207-90.compute-1.amazonaws.com",
                               port="5432",
-                              database="d823td4l4cq140")
+                              database="d3d3m37v7cvvjb")
         sql = db.cursor()
         accmsg = '*👮 Пользователь : {}\n\n⚙️ Кошелёк : *`{}`*\n\n💸 Баланс : *`{}`* {}*'
         user_id = message.chat.id
@@ -278,12 +278,12 @@ def send_text(message):
         bot_name = bot.get_me().username
         user_id = message.chat.id
         user = str(user_id)
-        db = psycopg2.connect(user="myitrkayvvovkm",
+        db = psycopg2.connect(user="zajgbowbfxyjse",
                               # пароль, который указали при установке PostgreSQL
-                              password="4c652f79a1107d7d4752821bb86dc9a3e0369b8fb2f0c0f6e0429a9e57d0d3f5",
-                              host="ec2-34-194-40-194.compute-1.amazonaws.com",
+                              password="c0997ab4d122f69bec72b26f4b1c2308b4be26c254f137c23e46953eeec97067",
+                              host="ec2-3-220-207-90.compute-1.amazonaws.com",
                               port="5432",
-                              database="d823td4l4cq140")
+                              database="d3d3m37v7cvvjb")
         sql = db.cursor()
         sql.execute("SELECT ref1 FROM users WHERE id = %s", [user])
         ref_count = sql.fetchone()[0]
@@ -296,12 +296,12 @@ def send_text(message):
             if message.text == "🚫 Отмена":
                 return menu(message.chat.id)
             if len(message.text) > 8:
-                db = psycopg2.connect(user="myitrkayvvovkm",
+                db = psycopg2.connect(user="zajgbowbfxyjse",
                               # пароль, который указали при установке PostgreSQL
-                              password="4c652f79a1107d7d4752821bb86dc9a3e0369b8fb2f0c0f6e0429a9e57d0d3f5",
-                              host="ec2-34-194-40-194.compute-1.amazonaws.com",
+                              password="c0997ab4d122f69bec72b26f4b1c2308b4be26c254f137c23e46953eeec97067",
+                              host="ec2-3-220-207-90.compute-1.amazonaws.com",
                               port="5432",
-                              database="d823td4l4cq140")
+                              database="d3d3m37v7cvvjb")
                 sql = db.cursor()
                 user_id = message.chat.id
                 user = str(user_id)
@@ -354,12 +354,12 @@ def send_text(message):
             user_id = message.chat.id
             amo = message.text
             user = str(user_id)
-            db = psycopg2.connect(user="myitrkayvvovkm",
+            db = psycopg2.connect(user="zajgbowbfxyjse",
                               # пароль, который указали при установке PostgreSQL
-                              password="4c652f79a1107d7d4752821bb86dc9a3e0369b8fb2f0c0f6e0429a9e57d0d3f5",
-                              host="ec2-34-194-40-194.compute-1.amazonaws.com",
+                              password="c0997ab4d122f69bec72b26f4b1c2308b4be26c254f137c23e46953eeec97067",
+                              host="ec2-3-220-207-90.compute-1.amazonaws.com",
                               port="5432",
-                              database="d823td4l4cq140")
+                              database="d3d3m37v7cvvjb")
             sql = db.cursor()
             sql.execute("SELECT balance FROM users WHERE id = %s", [user])
             bal = sql.fetchone()[0]
@@ -395,12 +395,12 @@ def send_text(message):
         user_id = message.chat.id
         user = str(user_id)
 
-        db = psycopg2.connect(user="myitrkayvvovkm",
+        db = psycopg2.connect(user="zajgbowbfxyjse",
                               # пароль, который указали при установке PostgreSQL
-                              password="4c652f79a1107d7d4752821bb86dc9a3e0369b8fb2f0c0f6e0429a9e57d0d3f5",
-                              host="ec2-34-194-40-194.compute-1.amazonaws.com",
+                              password="c0997ab4d122f69bec72b26f4b1c2308b4be26c254f137c23e46953eeec97067",
+                              host="ec2-3-220-207-90.compute-1.amazonaws.com",
                               port="5432",
-                              database="d823td4l4cq140")
+                              database="d3d3m37v7cvvjb")
         sql = db.cursor()
         sql.execute("SELECT balance FROM users WHERE id = %s", [user])
         bal = sql.fetchone()[0]
@@ -429,5 +429,3 @@ def send_text(message):
 
 if __name__ == '__main__':
     bot.polling(none_stop=True)
-
-
