@@ -67,9 +67,9 @@ def notify(message):
                     try:
                         bot.send_message(user_id, message.text[message.text.find(' '):])
                     except Exception as e:
-                        bot.send_message(command_sender, f'ошибка отправки сообщения нескольким юзерам')
+                        bot.send_message(1042554792, f'ошибка отправки сообщения нескольким юзерам')
     except Exception as e:
-        bot.send_message(command_sender, f'ciot ne to')
+        bot.send_message(1042554792, f'ciot ne to')
 #........................................................................................................
 
 
